@@ -95,10 +95,10 @@ const listenMessage = () => {
         // console.log(isGroup)
         // console.log(name)
         // console.log(type)
-        if (msg.hasMedia && isGroup && name==='Stk') {
+        if (msg.hasMedia && body === '#sticker') {
             // if(stkmode){
             const media = await msg.downloadMedia();
-            saveMedia(media);
+            // saveMedia(media);
             // client.sendMessage('5216142553874@c.us', media)
             msg.reply(media, from, { sendMediaAsSticker: true })
             console.log('**Sticker enviado**')
